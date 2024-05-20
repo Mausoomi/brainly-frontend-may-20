@@ -1,0 +1,145 @@
+.dashboard-bg {
+  /* background-color: #151738; */
+  background-image: url("../Assets/Images/Bright.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  text-align: left;
+  padding: 1rem;
+}
+
+.css-1k2u9zb-MuiChartsAxis-root .MuiChartsAxis-tickLabel {
+  color: white !important;
+  fill: white !important;
+}
+
+.dash-heading {
+  font-family: Urbanist;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+  text-align: left;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.client-name-h {
+  font-family: Urbanist;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 45.6px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.client-name-p {
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: left;
+  color: #fafafa;
+  margin-bottom: 40px;
+}
+
+.chart-h {
+  font-family: Urbanist;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.activity-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.activity-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(92.77deg, #761de8 -2.94%, #29bdec 56.14%);
+  border-image-slice: 1;
+  border-radius: 10px; /* Add border-radius */
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.css-195sd4n-MuiChartsGrid-line {
+  stroke: #b1b1b1 !important;
+  shape-rendering: crispEdges;
+  stroke-width: 1;
+}
+
+.css-1la267r-MuiAreaElement-root {
+  stroke: none;
+  background-image: linear-gradient(
+    180deg,
+    #761de8 0%,
+    rgba(160, 102, 255, 0.1) 100%
+  ) !important;
+  fill: #751de8c0 !important;
+}
+
+.css-xyaj9i-MuiMarkElement-root {
+  fill: #fff;
+  stroke: #02b2af;
+  stroke-width: 2;
+  display: none;
+}
+
+.chart-dropdown > div {
+  padding: 15px;
+  background-color: #03051b !important;
+  color: white;
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  outline: 0;
+  background-color: #100f52;
+  color: #fff;
+}
+
+.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
+  color: white !important;
+}
+
+.ab-1 {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 768px) {
+  .ab-1 {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .activity-container {
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 11px;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 387px) {
+  .activity-container {
+    padding: 10px;
+  }
+}
