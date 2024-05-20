@@ -40,6 +40,9 @@ button {
     background-image: linear-gradient(180deg, #761DE8 0%, rgba(160, 102, 255, 0.1) 100%) !important;
     fill: #751de8c0 !important;
 }
+tspan {
+    color: white !important;
+}
 @media only screen and (max-width: 780px) {
   body{
   
