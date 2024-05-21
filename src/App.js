@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes, useNavigate } from "react-router-dom";
@@ -25,28 +24,28 @@ import { async_loaduser } from "./store/Actions/Authactions.js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProtectedRoute from "./helper/ProtectedRoute.js";
-import Layout from './Components/Admin-compoents/Layout.js'
-import AdminHome from './Components/Admin-compoents/AdminHome.js'
-import AdminFantasy from './Components/Admin-compoents/AdminFantasy/AdminFantasy.js'
-import AdminADDFantasy from './Components/Admin-compoents/AdminFantasy/AdminADDFantasy.js'
-import AdminEDITFantasy from './Components/Admin-compoents/AdminFantasy/AdminEDITFantasy.js'
-import AdminAdventure from './Components/Admin-compoents/AdminAdventure/AdminAdventure.js'
-import AdminADDAdventure from './Components/Admin-compoents/AdminAdventure/AdminADDAdventure.js'
-import AdminEDITAdventure from './Components/Admin-compoents/AdminAdventure/AdminEDITAdventure.js'
-import AdminMystery from './Components/Admin-compoents/AdminMystery/AdminMystery.js'
-import AdminADDMystery from './Components/Admin-compoents/AdminMystery/AdminADDMystery.js'
-import AdminEDITMystery from './Components/Admin-compoents/AdminMystery/AdminEDITMystery.js'
-import AdminScienceFiction from './Components/Admin-compoents/AdminScience/AdminScienceFiction.js'
-import AdminADDScienceFiction from './Components/Admin-compoents/AdminScience/AdminADDScienceFiction.js'
-import AdminEDITScienceFiction from './Components/Admin-compoents/AdminScience/AdminEDITScienceFiction.js'
-import AdminHistoryFiction from './Components/Admin-compoents/AdminHistory/AdminHistoryFiction.js'
-import AdminADDHistoryFiction from './Components/Admin-compoents/AdminHistory/AdminADDHistoryFiction.js'
+import Layout from "./Components/Admin-compoents/Layout.js";
+import AdminHome from "./Components/Admin-compoents/AdminHome.js";
+import AdminFantasy from "./Components/Admin-compoents/AdminFantasy/AdminFantasy.js";
+import AdminADDFantasy from "./Components/Admin-compoents/AdminFantasy/AdminADDFantasy.js";
+import AdminEDITFantasy from "./Components/Admin-compoents/AdminFantasy/AdminEDITFantasy.js";
+import AdminAdventure from "./Components/Admin-compoents/AdminAdventure/AdminAdventure.js";
+import AdminADDAdventure from "./Components/Admin-compoents/AdminAdventure/AdminADDAdventure.js";
+import AdminEDITAdventure from "./Components/Admin-compoents/AdminAdventure/AdminEDITAdventure.js";
+import AdminMystery from "./Components/Admin-compoents/AdminMystery/AdminMystery.js";
+import AdminADDMystery from "./Components/Admin-compoents/AdminMystery/AdminADDMystery.js";
+import AdminEDITMystery from "./Components/Admin-compoents/AdminMystery/AdminEDITMystery.js";
+import AdminScienceFiction from "./Components/Admin-compoents/AdminScience/AdminScienceFiction.js";
+import AdminADDScienceFiction from "./Components/Admin-compoents/AdminScience/AdminADDScienceFiction.js";
+import AdminEDITScienceFiction from "./Components/Admin-compoents/AdminScience/AdminEDITScienceFiction.js";
+import AdminHistoryFiction from "./Components/Admin-compoents/AdminHistory/AdminHistoryFiction.js";
+import AdminADDHistoryFiction from "./Components/Admin-compoents/AdminHistory/AdminADDHistoryFiction.js";
 import AdminEDITHistoryFiction from "./Components/Admin-compoents/AdminHistory/AdminEDITHistoryFiction.js";
-import AdminSportification from './Components/Admin-compoents/AdminSport/AdminSportification.js'
+import AdminSportification from "./Components/Admin-compoents/AdminSport/AdminSportification.js";
 import AdminADDSportification from "./Components/Admin-compoents/AdminSport/AdminADDSportification.js";
 import AdminEDITSportification from "./Components/Admin-compoents/AdminSport/AdminEDITSportification.js";
 import HomeLoggeIn from "./Pages/HomeLoggeIn.jsx";
-
+import UserInfo from "./Components/Admin-compoents/UserInfo.js";
 
 function App() {
   const dispatch = useDispatch();
@@ -58,48 +57,46 @@ function App() {
   const selectPlanRef = useRef(null);
   const faqRef = useRef(null);
   const navigate = useNavigate();
-  
-const scrollToRef = (refId) => {
-  // console.log(refId);
-  switch (refId) {
-    case "revolutionize":
-      navigate("/");
-      revolutionizeRef.current?.scrollIntoView({ behavior: "smooth" });
-      break;
-    case "brainylingo":
-      navigate("/");
-      brainylingoRef.current?.scrollIntoView({ behavior: "smooth" });
-      break;
-    case "aboutUs":
-      navigate("/");
-      aboutUsRef.current?.scrollIntoView({ behavior: "smooth" });
-      break;
-    case "howitWork":
-      navigate("/");
-      howitWorkRef.current?.scrollIntoView({ behavior: "smooth" });
-      break;
-    case "learners":
-      navigate("/");
-      learnersRef.current?.scrollIntoView({ behavior: "smooth" });
-      break;
-    case "selectPlan":
-      navigate("/");
-      selectPlanRef.current?.scrollIntoView({ behavior: "smooth" });
-      break;
-    case "faq":
-      navigate("/");
-      faqRef.current?.scrollIntoView({ behavior: "smooth" });
-      break;
-    default:
-      break;
-  }
-};
+
+  const scrollToRef = (refId) => {
+    // console.log(refId);
+    switch (refId) {
+      case "revolutionize":
+        navigate("/");
+        revolutionizeRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "brainylingo":
+        navigate("/");
+        brainylingoRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "aboutUs":
+        navigate("/");
+        aboutUsRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "howitWork":
+        navigate("/");
+        howitWorkRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "learners":
+        navigate("/");
+        learnersRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "selectPlan":
+        navigate("/");
+        selectPlanRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "faq":
+        navigate("/");
+        faqRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      default:
+        break;
+    }
+  };
 
   useEffect(() => {
     dispatch(async_loaduser());
   }, []);
-
-
 
   return (
     <div className="App">
@@ -107,7 +104,7 @@ const scrollToRef = (refId) => {
       <NavBar scrollToRef={scrollToRef} />
       <Routes>
         <Route
-          path="/"  
+          path="/"
           element={
             <HomePage
               revolutionizeRef={revolutionizeRef}
@@ -125,7 +122,7 @@ const scrollToRef = (refId) => {
         <Route
           path="/loggedInHome"
           element={
-            <ProtectedRoute> 
+            <ProtectedRoute>
               <HomeLoggeIn />
             </ProtectedRoute>
           }
@@ -229,6 +226,8 @@ const scrollToRef = (refId) => {
           }
         >
           <Route path="/Admin/Admin-Home" element={<AdminHome />} />
+          <Route path="/Admin/Admin-UserDetails" element={<UserInfo />} />
+
           <Route path="/Admin/Admin-Fantasy" element={<AdminFantasy />} />
           <Route
             path="/Admin/Admin-Fantasy/Admin-ADDFantasy"

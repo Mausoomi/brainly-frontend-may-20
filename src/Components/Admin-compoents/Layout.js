@@ -181,6 +181,17 @@ const Layout = () => {
             Dashboard
           </Link>
         </div>
+        <div className="w-100  mt-2 items-center  admin_links_box_padding">
+          <span className="text-lg text-white">
+            <i class="bi bi-house-fill"></i>
+          </span>
+          <Link
+            to="/Admin/Admin-UserDetails"
+            className="text-lg mx-3 text-white"
+          >
+            User Details
+          </Link>
+        </div>
         {/* Repeat similar structure for other links */}
         <div className="w-100  mt-2 items-center  admin_links_box_padding">
           <span className="text-lg text-white">
