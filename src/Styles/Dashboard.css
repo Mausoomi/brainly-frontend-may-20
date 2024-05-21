@@ -11,7 +11,9 @@
   color: white !important;
   fill: white !important;
 }
-
+.css-34hspi .MuiChartsAxis-tickLabel{
+   fill: white !important;
+}
 .dash-heading {
   font-family: Urbanist;
   font-size: 24px;
@@ -74,6 +76,7 @@
   stroke: #b1b1b1 !important;
   shape-rendering: crispEdges;
   stroke-width: 1;
+  
 }
 
 .css-1la267r-MuiAreaElement-root {
@@ -84,9 +87,11 @@
     rgba(160, 102, 255, 0.1) 100%
   ) !important;
   fill: #751de8c0 !important;
+ 
 }
 .css-10hifel{
    fill: #751de8c0 !important;
+
 }
 
 .css-xyaj9i-MuiMarkElement-root {
@@ -94,6 +99,7 @@
   stroke: #02b2af;
   stroke-width: 2;
   display: none;
+
 }
 
 .chart-dropdown > div {
@@ -111,7 +117,7 @@
   padding-bottom: 8px;
   outline: 0;
   background-color: #100f52;
-  color: #fff;
+
 }
 
 .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {

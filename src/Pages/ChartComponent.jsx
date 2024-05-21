@@ -6,19 +6,56 @@ import { Select, MenuItem, FormControl, InputLabel } from "@mui/material";
 import { useSelector } from "react-redux";
 import { format, getISOWeek, parseISO } from "date-fns";
 
+// const chartSetting = {
+//   width: 1850,
+//   height: 450,
+
+//   sx: {
+//     [`.${axisClasses.left} .${axisClasses.label}`]: {
+//       // transform: 'translate(-100px, 0)',
+//     },
+//     [`.${axisClasses.left}`]: {
+//       color: "white !important",
+//     },
+//     [`.${axisClasses.line}`]: {
+//       stroke: "white !important",
+//     },
+//     [`.${axisClasses.bar}`]: {
+//       stroke: "white !important", // Vertical border color
+//     },
+//     [`.${axisClasses.line}`]: {
+//       stroke: "white !important", // Color of the line
+//     },
+//     [`.${axisClasses.axis}:not(.${axisClasses.axisX}) .${axisClasses.line}`]: {
+//       stroke: "white !important", // Color of the background line
+//       strokeDasharray: "4", // Optional: Add dashes to the line
+//     },
+//     [`.${axisClasses.x} .${axisClasses.line}`]: {
+//       stroke: "white !important", // Optional: Color of the baseline grid line
+//     },
+//     [`.${axisClasses.axis}`]: {
+//       stroke: "white !important", // Color of axes
+//     },
+//     [`.${axisClasses.grid}`]: {
+//       stroke: "white !important", // Color of vertical grid lines
+//     },
+//     [`.${axisClasses.y} .${axisClasses.grid}`]: {
+//       stroke: "white !important", // Optional: Color of the y-axis grid line
+//     },
+//     [`.${AreaElement.className}`]: {
+//       fill: "rgba(255, 255, 255, 0.3)", // Change the fill color here
+//     },
+//     [`.${axisClasses.x} .${axisClasses.tickLabel}`]: {
+//       textAnchor: "start", // Align text to the start (left)
+//       fill: "white",
+//     },
+//   },
+// };
+
 const chartSetting = {
-  // yAxis: [
-  //     {
-  //         label: 'rainfall (mm)',
-  //     },
-  // ],
   width: 1850,
   height: 450,
-
   sx: {
-    [`.${axisClasses.left} .${axisClasses.label}`]: {
-      // transform: 'translate(-100px, 0)',
-    },
     [`.${axisClasses.left}`]: {
       color: "white !important",
     },
@@ -26,116 +63,33 @@ const chartSetting = {
       stroke: "white !important",
     },
     [`.${axisClasses.bar}`]: {
-      stroke: "white !important", // Vertical border color
-    },
-    [`.${axisClasses.line}`]: {
-      stroke: "white !important", // Color of the line
+      stroke: "white !important",
     },
     [`.${axisClasses.axis}:not(.${axisClasses.axisX}) .${axisClasses.line}`]: {
-      stroke: "white !important", // Color of the background line
-      strokeDasharray: "4", // Optional: Add dashes to the line
+      stroke: "white !important",
+      strokeDasharray: "4",
     },
     [`.${axisClasses.x} .${axisClasses.line}`]: {
-      stroke: "white !important", // Optional: Color of the baseline grid line
+      stroke: "white !important",
     },
     [`.${axisClasses.axis}`]: {
-      stroke: "white !important", // Color of axes
+      stroke: "white !important",
     },
     [`.${axisClasses.grid}`]: {
-      stroke: "white !important", // Color of vertical grid lines
+      stroke: "white !important",
     },
     [`.${axisClasses.y} .${axisClasses.grid}`]: {
-      stroke: "white !important", // Optional: Color of the y-axis grid line
+      stroke: "white !important",
     },
     [`.${AreaElement.className}`]: {
-      fill: "rgba(255, 255, 255, 0.3)", // Change the fill color here
+      fill: "rgba(255, 255, 255, 0.3)",
     },
     [`.${axisClasses.x} .${axisClasses.tickLabel}`]: {
-      textAnchor: "start", // Align text to the start (left)
+      textAnchor: "start",
       fill: "white",
     },
   },
 };
-
-// Define datasets for activity
-const activityMonthlyDataset = [
-  {
-    month: "January",
-    value: 1000,
-  },
-  {
-    month: "February",
-    value: 1200,
-  },
-  {
-    month: "March",
-    value: 1500,
-  },
-  {
-    month: "Arail",
-    value: 800,
-  },
-  {
-    month: "may",
-    value: 900,
-  },
-  {
-    month: "june",
-    value: 700,
-  },
-  {
-    month: "july",
-    value: 1400,
-  },
-  {
-    month: "Agust",
-    value: 500,
-  },
-  {
-    month: "September",
-    value: 400,
-  },
-  {
-    month: "October",
-    value: 1000,
-  },
-  {
-    month: "November",
-    value: 1200,
-  },
-  {
-    month: "December",
-    value: 1400,
-  },
-
-  // Add more months as needed
-];
-
-const activityWeeklyDataset = [
-  {
-    week: 1,
-    year: 2024,
-    value: 250,
-  },
-  {
-    week: 2,
-    year: 2024,
-    value: 300,
-  },
-  // Add more weeks as needed
-];
-
-const activityYearlyDataset = [
-  {
-    year: 2024,
-    value: 300,
-  },
-  {
-    year: 2025,
-    value: 500,
-  },
-  // Add more years as needed
-];
 
 const valueFormatter = (value) => `${value}word`;
 
@@ -179,41 +133,6 @@ export default function BarsDataset({ Children_Name }) {
     return Math.floor(offsetDate / 7) + 1;
   };
 
-  //   useEffect(() => {
-  //     WordCount[0]?.CounttimeStamps.forEach((timestamp) => {
-  //       const date = new Date(timestamp);
-  //       const day = date.getDate();
-  //       const weekOfMonth = getWeekOfMonth(date);
-  //       const dayOfWeek = date.toLocaleString("default", { weekday: "long" });
-  //       const month = date.toLocaleString("default", { month: "long" });
-
-  //       console.log(dayOfWeek, day, weekOfMonth, month);
-  //     });
-
-  //   }, [WordCount]);
-  // useEffect(() => {
-  //   // Initialize objects to store counts
-  //   const weekdayCounts = {};
-  //   const monthCounts = {};
-  //   const weekOfMonthCounts = {};
-
-  //   WordCount[0]?.CounttimeStamps.forEach((timestamp) => {
-  //     const date = new Date(timestamp);
-  //     const dayOfWeek = date.toLocaleString("default", { weekday: "long" });
-  //     const day = date.getDate();
-  //     const weekOfMonth = getWeekOfMonth(date);
-  //     const month = date.toLocaleString("default", { month: "long" });
-
-  //     // Increment counts
-  //     weekdayCounts[dayOfWeek] = (weekdayCounts[dayOfWeek] || 0) + 1;
-  //     monthCounts[month] = (monthCounts[month] || 0) + 1;
-  //     weekOfMonthCounts[weekOfMonth] = (weekOfMonthCounts[weekOfMonth] || 0) + 1;
-  //   });
-
-  //   console.log("Weekday Counts:", weekdayCounts);
-  //   console.log("Month Counts:", monthCounts);
-  //   console.log("Week of Month Counts:", weekOfMonthCounts);
-  // }, [WordCount]);
 
   useEffect(() => {
     const weekdayCounts = {};
@@ -328,8 +247,12 @@ export default function BarsDataset({ Children_Name }) {
         {...chartSetting}
         leftAxis={null}
         labelStyle={{ color: "white !important" }}
+        // grid={{
+        //   vertical: true,
+        // }}
         grid={{
           vertical: true,
+          color: "red",
         }}
         domain={{ x: [0, "dataMax"], y: [0, datasetToRender.length - 1] }}
         axisHighlight={{ x: "none" }}
