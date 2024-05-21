@@ -43,7 +43,7 @@ function DailyQuiz() {
     const Daily_Quiz_Questions = useSelector(
         (state) => state.DailyQuiz.Current_DailyQuiz_Question
     );
-
+console.log(Daily_Quiz_Questions);
     const user = useSelector((state) => state.auth.user);
     const id = user._id;
     let questions = Daily_Quiz_Questions
@@ -191,7 +191,7 @@ function DailyQuiz() {
             <>
               {!questions || questions.length === 0 ? (
                 <div style={{padding: '0px 20px'}} className="text-white font-bold">
-                  <img className='no-question' src={require('../../Assets/Images/no-question.png')} alt="" />
+                  <img className='no-question' src={require('../../Assets/Images/no-question.png')} alt="no questions" />
                 </div>
               ) : (
                 <>

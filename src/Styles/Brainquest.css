@@ -35,9 +35,10 @@
     box-shadow: 20px 20px 50px #302f2f85;
     border-right: 0px;
     margin-bottom: 20px;
-    align-items: center;
+    /* align-items: center; */
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+        flex-direction: column;
 }
 
 .bg-DailyQ {}
