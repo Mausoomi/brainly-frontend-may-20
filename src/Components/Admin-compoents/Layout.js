@@ -163,7 +163,7 @@ const Layout = () => {
 
   return (
     <div className="col-md-12 bg-gradient-to-b from-blue-900 to-white h-screen flex">
-      <div className="w-1/4 bg-blue-900 p-2">
+      <div className="w-[15%] bg-blue-900 p-2">
         <div
           onClick={AdminNavigatorHandler}
           style={{ cursor: "pointer" }}
@@ -268,7 +268,7 @@ const Layout = () => {
           </span>
         </button>
       </div>
-      <div className="w-full bg-white p-2 flex">
+      <div className="w-[85%] bg-white p-2 flex">
         <Outlet />
       </div>
     </div>

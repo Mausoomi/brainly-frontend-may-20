@@ -37,7 +37,8 @@ function DashBoard() {
   const userData = AllDashboardData?.filter(
     (ele) => ele.StudentId._id === user._id
   );
-  console.log(userData);
+
+  console.log(AllDashboardData);
 
   useEffect(() => {
     if (AllDashboardData.length > 0) {
@@ -66,14 +67,10 @@ function DashBoard() {
     <>
       <div className="text-white dashboard-bg">
         <div>
-          <div>
-            <h1 className="dash-heading">Dashboard</h1>
-          </div>
+         
           <div>
             <h1 className="client-name-h">{user?.Children_Name}</h1>
-            <p className="client-name-p">
-              Ready to take your learning skills to the next level
-            </p>
+            
           </div>
           <div>
             <div>

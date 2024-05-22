@@ -72,6 +72,20 @@
   padding: 20px;
   margin-bottom: 30px;
 }
+.activity-container-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(92.77deg, #761de8 -2.94%, #29bdec 56.14%);
+  border-image-slice: 1;
+  border-radius: 10px; /* Add border-radius */
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #03051b;
+}
 
 .css-195sd4n-MuiChartsGrid-line {
   stroke: #b1b1b1 !important;
@@ -140,6 +154,10 @@
   justify-content: space-around;
 }
 
+.btnAdminDropDwon {
+  width: 14%;
+}
+
 @media screen and (max-width: 768px) {
   .ab-1 {
     flex-direction: column;
@@ -155,10 +173,19 @@
     gap: 11px;
     align-items: flex-start;
   }
+  .activity-container-admin {
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 11px;
+    align-items: flex-start;
+  }
 }
 
 @media screen and (max-width: 387px) {
   .activity-container {
+    padding: 10px;
+  }
+  .activity-container-admin {
     padding: 10px;
   }
 }

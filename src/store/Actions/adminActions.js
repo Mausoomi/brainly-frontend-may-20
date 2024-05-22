@@ -207,3 +207,16 @@ export const UpdateSportification = createAsyncThunk(
     return response.data.data;
   }
 );
+
+
+
+export const Get_All_Student_list = createAsyncThunk(
+  "Admin/Get_All_Student_list",
+  async () => {
+    // console.log(formData);
+    // console.log(id);
+    const response = await axios.get(`Get_All_Student_list`);
+    console.log(response);
+    return response;
+  }
+);

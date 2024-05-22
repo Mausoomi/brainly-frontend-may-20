@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { imageUpload } from "../Actions/adminActions";
+import { Get_All_Student_list, imageUpload } from "../Actions/adminActions";
+import { toast } from "react-toastify";
 
 let intialState = {
-  loading:false
+  loading:false,
+  allStudentData:[]
 };
 
 const AdminSlice = createSlice({
@@ -22,6 +24,24 @@ const AdminSlice = createSlice({
       .addCase(imageUpload.rejected, (state) => {
         state.loading = false;
       })
+      .addCase(Get_All_Student_list.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(Get_All_Student_list.fulfilled, (state, action) => {
+        if(action.payload && action.payload.data){
+          state.allStudentData = action.payload.data.All_Student_list;
+          state.loading = false;
+        }else{
+            toast.error(action.payload, {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+            });
+        }    
+      })
+      .addCase(Get_All_Student_list.rejected, (state) => {
+        state.loading = false;
+      });
   },
 });
 

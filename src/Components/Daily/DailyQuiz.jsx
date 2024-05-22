@@ -190,7 +190,7 @@ console.log(Daily_Quiz_Questions);
           ) : (
             <>
               {!questions || questions.length === 0 ? (
-                <div style={{padding: '0px 20px'}} className="text-white font-bold">
+                <div style={{padding: '0px 20px'}} className="text-white font-bold NoDataAval">
                   <img className='no-question' src={require('../../Assets/Images/no-question.png')} alt="no questions" />
                 </div>
               ) : (
