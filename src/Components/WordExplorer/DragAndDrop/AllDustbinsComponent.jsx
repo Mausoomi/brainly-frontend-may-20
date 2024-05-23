@@ -26,7 +26,7 @@ function AllDustbinsComponent({ dustbins }) {
           <div className="">
             <div className="droppedImg">
               <img
-                src={` https://ik.imagekit.io/dev24/${dustbin.Storyimage}`}
+                src={`https://ik.imagekit.io/xhdikl4j8/${dustbin.Storyimage}`}
                 alt={`Box dropped in Dustbin ${index + 1}`}
                 style={{ width: "100%", height: "100%" }}
               />

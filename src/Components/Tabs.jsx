@@ -82,7 +82,10 @@ function Tabs({Brainquest ,Storyadvenure ,Wordexplore}) {
         >
           {activeTab === 0 && <WordExplorer Wordexplore={Wordexplore} />}
           {activeTab === 1 && (
-            <StoryAdventure StoryAdventureData={Storyadvenure} />
+            <StoryAdventure
+              StoryAdventureData={Storyadvenure}
+              Wordexplore={Wordexplore}
+            />
           )}
           {activeTab === 2 && (
             <BrainQuest

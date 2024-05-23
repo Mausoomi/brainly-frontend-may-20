@@ -651,7 +651,7 @@ const AdminADDHistoryFiction = () => {
               <div className="w-full sm:w-1/2 lg:w-1/4 px-2 mt-2" key={index}>
                 <img
                   className="w-full rounded active"
-                  src={"https://ik.imagekit.io/dev24/" + md}
+                  src={"https://ik.imagekit.io/xhdikl4j8/" + md}
                   alt={md}
                 />
                 <span
@@ -731,7 +731,7 @@ const AdminADDHistoryFiction = () => {
                 >
                   <img
                     className="w-full rounded active"
-                    src={"https://ik.imagekit.io/dev24/" + md}
+                    src={"https://ik.imagekit.io/xhdikl4j8/" + md}
                     alt={md}
                   />
                   <span
@@ -873,7 +873,7 @@ const AdminADDHistoryFiction = () => {
                 >
                   <img
                     className="w-full rounded active"
-                    src={"https://ik.imagekit.io/dev24/" + md}
+                    src={"https://ik.imagekit.io/xhdikl4j8/" + md}
                     alt={md}
                   />
                   <span

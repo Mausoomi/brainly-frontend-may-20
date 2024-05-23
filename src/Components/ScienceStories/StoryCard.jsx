@@ -178,7 +178,7 @@ function StoryCard({
       <div className="sciStryCard">
         <div className="stryimgbox">
           <img
-            src={`https://ik.imagekit.io/dev24/${stryIMg}`}
+            src={`https://ik.imagekit.io/xhdikl4j8/${stryIMg}`}
             alt="StoryImage"
           />
         </div>

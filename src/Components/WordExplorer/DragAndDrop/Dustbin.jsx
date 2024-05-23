@@ -165,13 +165,13 @@ export const Dustbin = memo(function Dustbin({
           <div className="droppedImg">
             {isMatched ? (
               <img
-                src={` https://ik.imagekit.io/dev24/${matchedImg}`}
+                src={`https://ik.imagekit.io/xhdikl4j8/${matchedImg}`}
                 alt="box"
                 className="imgLastDropped"
               />
             ) : lastDroppedItem ? (
               <img
-                src={` https://ik.imagekit.io/dev24/${lastDroppedItem}`}
+                src={` https://ik.imagekit.io/xhdikl4j8/${lastDroppedItem}`}
                 alt="box"
                 className="imgLastDropped"
               />
@@ -200,7 +200,6 @@ export const Dustbin = memo(function Dustbin({
       )} */}
 
       {/* {/ <p> {JSON.stringify(lastDroppedItem.)}</p> /} */}
-   
     </div>
   );
 })

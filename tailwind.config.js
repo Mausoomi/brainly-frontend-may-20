@@ -10,7 +10,8 @@ module.exports = {
         poppins :["Poppins", "sans-serif"],
         Nunito:["Nunito", "sans-serif"],
         Inter:[ "Inter", "sans-serif"],
-        DMSans:["DM Sans", "sans-serif"]
+        DMSans:["DM Sans", "sans-serif"],
+        Poetsen:["Poetsen One", "sans-serif"]
         
       },
       fontWeight: {

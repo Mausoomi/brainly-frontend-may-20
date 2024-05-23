@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
 
-import "../Styles/storyAdventure.css"
-import Book from '../Components/Story Adventure/Book'
+import "../Styles/storyAdventure.css";
+import Book from "../Components/Story Adventure/Book";
 
-function StoryAdventure({StoryAdventureData}) {
-     
-// console.log(StoryAdventureData)
+function StoryAdventure({ StoryAdventureData, Wordexplore }) {
+  console.log(Wordexplore);
 
   return (
     <div>
@@ -14,9 +13,12 @@ function StoryAdventure({StoryAdventureData}) {
       </div>
   
         <Tabs/> */}
-        <Book StoryAdventureDataBook={StoryAdventureData}/>
+      <Book
+        StoryAdventureDataBook={StoryAdventureData}
+        Wordexplore={Wordexplore}
+      />
     </div>
-  )
+  );
 }
 
-export default StoryAdventure
+export default StoryAdventure;

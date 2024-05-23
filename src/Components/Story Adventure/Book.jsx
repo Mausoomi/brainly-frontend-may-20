@@ -1,10 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import BookImg from "../../Assets/Images/Book.png";
-function Book({ StoryAdventureDataBook }) {
+function Book({ StoryAdventureDataBook, Wordexplore }) {
   const [currentChunkIndex, setCurrentChunkIndex] = useState(0);
   const [paragraphChunks, setParagraphChunks] = useState([]);
   const [imageUrls, setImageUrls] = useState([]);
+  console.log(Wordexplore.data);
+
+  const BoldWordsStories = Wordexplore?.data?.map((world, index) => {
+    return world.Storytitle;
+  });
+  console.log(BoldWordsStories);
+
+const makeBold = (word) => {
+  if (BoldWordsStories.includes(word)) {
+    console.log(word);
+    return (
+      <p className="font-bold inline font-Poetsen" key={word}>
+        {word}
+      </p>
+    );
+  }
+  return word + " ";
+};
 
   useEffect(() => {
     if (StoryAdventureDataBook && StoryAdventureDataBook.content) {
@@ -34,9 +52,9 @@ function Book({ StoryAdventureDataBook }) {
     setCurrentChunkIndex((prevIndex) => Math.max(prevIndex - 1, 0));
   };
 
-  console.log(paragraphChunks);
+  // console.log(paragraphChunks);
 
-  console.log(imageUrls[currentChunkIndex]);
+  // console.log(imageUrls[currentChunkIndex]);
 
   return (
     <div className="book-main-container">
@@ -47,18 +65,42 @@ function Book({ StoryAdventureDataBook }) {
       <div className="storyDetails">
         <div className="storyText">
           <div className="storyLines">
-            {paragraphChunks[currentChunkIndex]?.map((para, index) => {
+            {/* {paragraphChunks[currentChunkIndex]?.map((para, index) => {
               console.log(para);
+              const paraArr = para.split(" ");
+              console.log(paraArr);
+
+              const paraArrWithbold = paraArr
+                .map((word, i) => {
+                  return makeBold(word);
+                })
+                .join(" ");
+              console.log(paraArrWithbold);
+
               return (
                 <>
                   <p className="text-left" key={index}>
-                    {para}
+                    {paraArrWithbold}
                   </p>
                   <br />
                 </>
               );
-            })}
+            })} */}
             {/* <p>{paragraphChunks[currentChunkIndex]}</p> */}
+            
+            {paragraphChunks[currentChunkIndex]?.map((para, index) => {
+              console.log(para);
+              const paraArr = para.split(" ");
+              console.log(paraArr);
+
+              return (
+                <p className="text-left" key={index}>
+                  {paraArr.map((word, i) => (
+                    <React.Fragment key={i}> {makeBold(word)} </React.Fragment>
+                  ))}
+                </p>
+              );
+            })}
           </div>
         </div>
         <div className="storyimg">
@@ -67,7 +109,11 @@ function Book({ StoryAdventureDataBook }) {
               console.log(img);
               return (
                 <>
-                  <img src={`https://ik.imagekit.io/dev24/${img}`} alt="Image" className="DataimgStory" />
+                  <img
+                    src={`https://ik.imagekit.io/xhdikl4j8/${img}`}
+                    alt="Image"
+                    className="DataimgStory"
+                  />
                 </>
               );
             })}
@@ -102,7 +148,10 @@ function Book({ StoryAdventureDataBook }) {
             disabled={currentChunkIndex === paragraphChunks.length - 1}
           >
             {currentChunkIndex === paragraphChunks.length - 1 ? (
-              ""
+              <>
+                <div>end</div>
+                <IoIosArrowForward />
+              </>
             ) : (
               <>
                 <div>Next</div>

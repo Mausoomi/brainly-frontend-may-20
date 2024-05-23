@@ -650,7 +650,7 @@ const AdminADDScienceFiction = () => {
               <div className="mt-2" key={index}>
                 <img
                   className="w-full"
-                  src={"https://ik.imagekit.io/dev24/" + md}
+                  src={"https://ik.imagekit.io/xhdikl4j8/" + md}
                   alt={md}
                 />
                 <span
@@ -725,7 +725,7 @@ const AdminADDScienceFiction = () => {
                   <div className="mt-2" key={imgIndex}>
                     <img
                       className="w-full"
-                      src={"https://ik.imagekit.io/dev24/" + md}
+                      src={"https://ik.imagekit.io/xhdikl4j8/" + md}
                       alt={md}
                     />
                     <span
@@ -860,7 +860,7 @@ const AdminADDScienceFiction = () => {
                   <div className="mt-2" key={imgIndex}>
                     <img
                       className="w-full"
-                      src={"https://ik.imagekit.io/dev24/" + md}
+                      src={"https://ik.imagekit.io/xhdikl4j8/" + md}
                       alt={md}
                     />
                     <span

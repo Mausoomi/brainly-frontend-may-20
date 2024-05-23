@@ -709,10 +709,10 @@ const AdminEDITSportification = () => {
             <div
               className="w-full sm:w-1/2 lg:w-1/4 px-2 mt-2 mb-2"
               key={index}
-            > 
+            >
               <img
                 className="w-full"
-                src={"https://ik.imagekit.io/dev24/" + md}
+                src={"https://ik.imagekit.io/xhdikl4j8/" + md}
                 alt={md}
               />
               <span
@@ -792,7 +792,7 @@ const AdminEDITSportification = () => {
                 >
                   <img
                     className="w-full"
-                    src={"https://ik.imagekit.io/dev24/" + md}
+                    src={"https://ik.imagekit.io/xhdikl4j8/" + md}
                     alt={md}
                   />
                   <span
@@ -897,9 +897,8 @@ const AdminEDITSportification = () => {
               </button>
             )}
           </div>
-
         ))}
-<button
+        <button
           className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 mt-2 initialpadding"
           onClick={() =>
             setFormData({ ...formData, Wordexplore: [initialWordexplore] })
@@ -931,7 +930,7 @@ const AdminEDITSportification = () => {
                 >
                   <img
                     className="w-full"
-                    src={"https://ik.imagekit.io/dev24/" + md}
+                    src={"https://ik.imagekit.io/xhdikl4j8/" + md}
                     alt={md}
                   />
                   <span

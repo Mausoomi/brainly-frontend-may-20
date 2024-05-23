@@ -86,7 +86,7 @@ export const Box = memo(function Box({
       : "linear-gradient(92.77deg, rgba(118, 29, 232, 0.3) -2.94%, rgba(41, 189, 236, 0.3) 56.14%)",
   };
   const bgImg = {
-    backgroundImage: `url(https://ik.imagekit.io/dev24/${BoxImg})`,
+    backgroundImage: `url(https://ik.imagekit.io/xhdikl4j8/${BoxImg})`,
     width: "100%",
     height: "100%",
     backgroundSize: "cover",

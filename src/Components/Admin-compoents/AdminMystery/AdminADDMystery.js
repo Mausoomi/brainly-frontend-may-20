@@ -655,7 +655,7 @@ const AdminADDMystery = () => {
               >
                 <img
                   class="w-full active"
-                  src={"https://ik.imagekit.io/dev24/" + md}
+                  src={"https://ik.imagekit.io/xhdikl4j8/" + md}
                   alt={md}
                 />
 
@@ -735,7 +735,7 @@ const AdminADDMystery = () => {
                 >
                   <img
                     class="w-full active"
-                    src={"https://ik.imagekit.io/dev24/" + md}
+                    src={"https://ik.imagekit.io/xhdikl4j8/" + md}
                     alt={md}
                   />
 
@@ -878,7 +878,7 @@ const AdminADDMystery = () => {
                 >
                   <img
                     class="w-full active"
-                    src={"https://ik.imagekit.io/dev24/" + md}
+                    src={"https://ik.imagekit.io/xhdikl4j8/" + md}
                     alt={md}
                   />
 

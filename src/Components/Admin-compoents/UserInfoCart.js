@@ -125,10 +125,10 @@ const AllDashboardData = useSelector(
           (ele) => ele.QuestionsWrongCount
         ).reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
-        setTotalQuestions(totalqueValue);
-        setCorrectQuestion(totalCorrectValue);
-        setWrongQuestions(totalWrongValue);
-        setTotalWordPracticed(WordCountData[0]?.Count);
+        setTotalQuestions(totalqueValue || 0);
+        setCorrectQuestion(totalCorrectValue || 0);
+        setWrongQuestions(totalWrongValue || 0);
+        setTotalWordPracticed(WordCountData[0]?.Count || 0);
       }
     }, [AllDashboardData, WordCountData]);
 
